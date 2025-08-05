@@ -38,7 +38,7 @@ function logNames(items) {
  */
 function getUppercaseNames(items) {
   // TODO: use `map`
-  return items.map(item => item.name.toUpperCase());
+  return items.map((item) => item.name.toUpperCase());
 }
 
 /**
@@ -48,11 +48,10 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
-  return items.find(function(item) {
+  return items.find(function (item) {
     return item.id === id;
   });
 }
-
 
 /**
  * @param {Item[]} items - array of items
@@ -61,6 +60,12 @@ function getItemById(items, id) {
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].name === name) {
+      return items[i].price;
+      //  need .price to return the price only
+    }
+  }
 }
 
 /**
@@ -70,6 +75,8 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
+  return items.filter(item => item.category === category);
+  // .filter only returns true
 }
 
 /**
