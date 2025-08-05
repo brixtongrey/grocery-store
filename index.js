@@ -85,7 +85,16 @@ function getItemsByCategory(items, category) {
  */
 function countItems(items) {
   // TODO: use `reduce`
-}
+  return items.reduce((acc, curr) => acc + curr.quantity, 0);
+  }
+
+  /* From class session:
+  const totalItems = shoppingList.reduce((acc, curr) => {
+  return acc + curr.quantity;
+  // need to do .quantity to add that specific object
+}, 0);
+  */
+
 
 /**
  * @param {Item[]} items - array of items
@@ -93,6 +102,7 @@ function countItems(items) {
  */
 function getTotalPrice(items) {
   // TODO: use `reduce`
+  return items.reduce((acc, curr) => acc + curr.price, 0);
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
